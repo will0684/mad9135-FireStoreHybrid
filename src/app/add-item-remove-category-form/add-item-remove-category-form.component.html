@@ -1,7 +1,7 @@
 <ion-list>
   <ion-item>
     <ion-label>Select Category</ion-label>
-    <ion-select [(ngModel)]='selectedCategory' name="categories">
+    <ion-select [(ngModel)]='selectedCategory'>
       <ion-select-option *ngFor="let category of categories" value="{{ category.id }}">{{ category.category }}</ion-select-option>
     </ion-select>
   </ion-item>
