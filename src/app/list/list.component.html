@@ -1,0 +1,4 @@
+<ion-list *ngFor="let category of categories">
+  <h3>{{ category.category }}</h3>
+  <ion-item *ngFor="let item of category.items; let i = index">{{ category.items[i] }}</ion-item>
+</ion-list>

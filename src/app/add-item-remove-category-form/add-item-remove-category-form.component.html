@@ -1,0 +1,11 @@
+<ion-list>
+  <ion-item>
+    <ion-label>Select Category</ion-label>
+    <ion-select [(ngModel)]='selectedCategory' name="categories">
+      <ion-select-option *ngFor="let category of categories" value="{{ category.id }}">{{ category.category }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <input [(ngModel)]='newItem' placeholder="New Item" type="text" name="new-item"/>
+  <ion-button (click)='this.addItem(this.selectedCategory, this.newItem)'>Add Item</ion-button>
+  <ion-button (click)='this.deleteCategory(this.selectedCategory)'>Delete Category</ion-button>
+</ion-list>
