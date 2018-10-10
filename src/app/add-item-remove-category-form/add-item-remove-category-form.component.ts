@@ -31,11 +31,10 @@ export class AddItemRemoveCategoryFormComponent implements OnInit {
   }
 
   fetchCategorieNames() {
+    this.categories = [];
     this.dataSrvc.getCategories().subscribe((collection) => {
-      collection.forEach((doc: any) => {
-        this.categories = [];
-        this.categories.push({category: doc.category, id: doc.id});
-      });
+      console.log(collection);
+      this.categories = collection;
     });
     console.log(this.categories);
   }
